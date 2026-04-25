@@ -7,58 +7,6 @@ body:
       value: |
         Thanks for taking the time to report a bug. Please fill in as much detail as possible.
 
-  - type: dropdown
-    id: component
-    attributes:
-      label: Component
-      description: Which part of AstralEmu is affected?
-      options:
-        - Image / System
-        - Emulator (standalone)
-        - Emulator (RetroArch core)
-        - EmulationStation DE
-        - Performance Manager (governor / overclock)
-        - Service Management (XFCE / Plasma Mobile / Kodi / Waydroid)
-        - Package Repository
-        - Image Builder / CI
-        - Update System
-        - Documentation
-        - Other
-    validations:
-      required: true
-
-  - type: input
-    id: device
-    attributes:
-      label: Device
-      description: What hardware are you running on?
-      placeholder: "e.g. Raspberry Pi 5, Orange Pi 5, ROG Ally, etc."
-    validations:
-      required: true
-
-  - type: dropdown
-    id: base-distro
-    attributes:
-      label: Base Distribution
-      description: Which base image are you using?
-      options:
-        - Ubuntu
-        - Debian
-        - Arch Linux
-        - Universal Blue (Fedora)
-        - Unknown / Other
-    validations:
-      required: true
-
-  - type: input
-    id: version
-    attributes:
-      label: Image Version / Date
-      description: The image version or build date (check in system settings or filename)
-      placeholder: "e.g. 2026-02-15 or v1.2.0"
-    validations:
-      required: true
-
   - type: textarea
     id: description
     attributes:
@@ -88,6 +36,24 @@ body:
       required: true
 
   - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Relevant context (OS, version, runtime, browser, etc.)
+      placeholder: |
+        - OS:
+        - Version:
+        - Other:
+
+  - type: textarea
     id: logs
     attributes:
       label: Logs / Screenshots
@@ -100,6 +66,4 @@ body:
       label: Checklist
       options:
         - label: I have searched existing issues and this is not a duplicate
-          required: true
-        - label: This does not involve pirated content or copyrighted material
           required: true

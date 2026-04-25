@@ -5,26 +5,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Have an idea to improve AstralEmu? We'd love to hear it.
-
-  - type: dropdown
-    id: component
-    attributes:
-      label: Component
-      description: Which area does this feature relate to?
-      options:
-        - Image / System
-        - Emulators
-        - EmulationStation DE / Frontend
-        - Performance Manager
-        - Service Management
-        - Package Repository / Build System
-        - Update System
-        - Documentation
-        - New Service Integration
-        - Other
-    validations:
-      required: true
+        Have an idea to improve this project? We'd love to hear it.
 
   - type: textarea
     id: problem
@@ -48,17 +29,11 @@ body:
       label: Alternatives Considered
       description: Any alternative approaches you've thought about?
 
-  - type: dropdown
-    id: scope
+  - type: textarea
+    id: context
     attributes:
-      label: Scope
-      description: How much of the project would this affect?
-      options:
-        - Single component
-        - Multiple components
-        - Entire system / architecture
-    validations:
-      required: true
+      label: Additional Context
+      description: Any other context, screenshots, or references that might help
 
   - type: checkboxes
     id: terms
@@ -66,6 +41,4 @@ body:
       label: Checklist
       options:
         - label: I have searched existing issues and discussions for this feature
-          required: true
-        - label: This does not request support for piracy or copyrighted content
           required: true
